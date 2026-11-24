@@ -1,0 +1,3 @@
+- insert:
+    - id: task-sidebar
+      name: 'dsh-task-sidebar'

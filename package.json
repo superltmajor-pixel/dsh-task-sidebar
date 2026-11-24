@@ -1,0 +1,59 @@
+{
+  "name": "dsh-task-sidebar",
+  "version": "0.10.6",
+  "type": "module",
+  "description": "A conversation-header panel for the current session's inputs, skills and connectors, pending interactions, and delivered files, with previews in the right sidebar.",
+  "license": "MIT",
+  "author": "superltmajor-pixel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superltmajor-pixel/dsh-task-sidebar.git"
+  },
+  "homepage": "https://github.com/superltmajor-pixel/dsh-task-sidebar#readme",
+  "bugs": "https://github.com/superltmajor-pixel/dsh-task-sidebar/issues",
+  "keywords": ["dsh-plugin", "deepseek-harness", "sidebar", "session-panel"],
+  "scripts": {
+    "test": "node tests/package-check.mjs && node tests/inputs-check.mjs && node tests/filerow-check.mjs"
+  },
+  "engines": {
+    "dsh": "0.2.2-rc.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "tests/*.mjs"
+  ],
+  "dependencies": {
+    "zod": "4.6.6"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
