@@ -11,7 +11,19 @@
   },
   "homepage": "https://github.com/superltmajor-pixel/dsh-task-sidebar#readme",
   "bugs": "https://github.com/superltmajor-pixel/dsh-task-sidebar/issues",
-  "keywords": ["dsh-plugin", "deepseek-harness", "sidebar", "session-panel"],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "deepseek",
+    "sidebar",
+    "session-panel",
+    "attachments",
+    "file-preview",
+    "mcp",
+    "connectors",
+    "skills"
+  ],
   "scripts": {
     "test": "node tests/package-check.mjs && node tests/inputs-check.mjs && node tests/filerow-check.mjs"
   },
